@@ -20,7 +20,7 @@ img {
 
 body {
   background: #3f3e3e;
-  color: #fff; /* Changed to white to match your design text colors */
+  color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   overflow-x: hidden;
 }
@@ -158,29 +158,49 @@ body {
   margin: 6rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 4rem;
   align-items: center;
 }
 
-.about-img img, .services-item img {
-  border-radius: 12px;
-  transition: transform 0.6s ease;
-}
-
-.about-img img:hover, .services-item img:hover {
-  transform: scale(1.03);
-}
-
-.about-text h2, .services-title, .section-title {
+.about-text h2, .services-title-reveal, .section-title {
   font-family: 'Lufga', sans-serif;
   text-align: center;
   color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.about-img img, .services-item-reveal img {
+  border-radius: 12px;
+  transition: transform 0.6s ease;
+  width: 100%;
+}
+
+.about-img img:hover, .services-item-reveal img:hover {
+  transform: scale(1.03);
 }
 
 .gallery-section {
   width: 100%;
   margin: 6rem auto;
-  row-gap: 2rem;
+}
+
+.gallery-group-reveal h3 {
+  text-align: center;
+  font-family: 'Lufga', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(255,255,255,0.1);
 }
 
 .gallery {
@@ -196,11 +216,6 @@ body {
   transition: transform 0.6s ease; 
 }
 
-.gallery-group-reveal h3{
-  text-align: center;
-}
-.gallery img:hover { transform: scale(1.03); }
-
 .thanks {
   width: 100%;
   max-width: 1200px;
@@ -209,7 +224,7 @@ body {
 }
 
 /* ===============================
-   4. MOBILE & TABLET (Fixes for iPhone)
+   4. MOBILE & TABLET (Fixes for iPhone 11/13)
 ================================ */
 @media (max-width: 768px) {
   .nav-container {
@@ -224,7 +239,7 @@ body {
   .nav-links {
     position: fixed;
     top: 70px;
-    right: -100%; /* Hidden by default */
+    right: -100%; 
     width: 100%;
     height: calc(100vh - 70px);
     background: rgba(0, 0, 0, 0.95);
@@ -234,15 +249,39 @@ body {
   }
 
   .nav-links.active {
-    right: 0; /* Menu slides in */
+    right: 0;
   }
 
-  /* Fixed 3rem spacing for iPhone */
+  /* Core alignment fixes for iPhone */
   section, .about-reveal, .services, .gallery-section {
     margin: 3rem auto !important;
     padding: 0 1.5rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+  }
+
+  /* Specific About paragraph fix */
+  .about-text p {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+  }
+
+  /* One item per row for Services and Gallery */
+  .services, .gallery {
+    grid-template-columns: 1fr !important;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .services-item-reveal, .about-img {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
   .intro {
@@ -253,10 +292,6 @@ body {
   .footer {
     margin-top: 3rem;
     padding: 3rem 1.5rem;
-  }
-
-  .thanks {
-    margin: 3rem auto;
   }
 }
 
@@ -326,61 +361,18 @@ body {
 
 .back-to-top.show { opacity: 1; }
 
-/* ===============================
-   SERVICES SECTION (RESTORED)
-================================ */
-.services {
-  width: 100%;
-  max-width: 90%;
-  margin: 1rem auto 0 auto;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* This keeps the side-by-side desktop layout */
-  gap: 3rem;
-  align-items: center;
-}
-
-.services-title-reveal {
-  grid-column: 1 / -1; /* This ensures the title spans both columns */
-  text-align: center;
-  font-size: 2.5rem;
-  margin-top: 1rem;
-  margin-bottom: .5rem;
-  font-family: 'Lufga', sans-serif;
-  color: #fff;
-}
-
-.services-item-reveal img {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  border-radius: 12px;
-  transition: transform 0.6s ease; /* The hover zoom animation */
-}
-
-.services-item-reveal img:hover {
-  transform: scale(1.03);
-}
-
-/* THE REVEAL ANIMATION (SPECIFIC TO THIS SECTION) */
+/* REVEAL ANIMATION LOGIC */
 .services.reveal, 
-.services-item-reveal.reveal {
+.services-item-reveal.reveal,
+.about-reveal.reveal {
   opacity: 0;
-  transform: translateY(40px) scale(0.98); /* The slight "pop" effect */
+  transform: translateY(40px) scale(0.98);
   transition: opacity 1s ease, transform 1s ease;
 }
 
 .services.reveal.active, 
-.services-item-reveal.reveal.active {
+.services-item-reveal.reveal.active,
+.about-reveal.reveal.active {
   opacity: 1;
   transform: translateY(0) scale(1);
-}
-
-/* MOBILE FIX FOR SERVICES */
-@media (max-width: 768px) {
-  .services {
-    grid-template-columns: 1fr; /* Stacks vertically on iPhone 11/13 */
-    margin-top: 3rem !important; /* Maintains the 3rem gap you requested */
-    gap: 2rem;
-  }
 }
