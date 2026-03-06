@@ -258,12 +258,19 @@ body {
     gap: 1.5rem;
   }
 
-  section, .about-reveal,.services, .gallery-section {
-    margin: 3rem auto !important;
+  .about-reveal,.gallery-section {
+    margin: 1rem auto !important;
     padding: 0 1.5rem;
     grid-template-columns: 1fr;
     text-align: center;
+    max-width: 110%;
   }
+  /* .services{
+    margin: -1rem auto !important;
+    padding: 0 1.5rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+  } */
 
   .intro {
     min-height: auto;
@@ -412,8 +419,8 @@ body {
   }
 
   .services-item-reveal {
-    width: 100%;
-    max-width: 100%;
+    width: 112%;
+    max-width: 110%;
   }
 
   .services-item-reveal img {
