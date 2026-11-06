@@ -4,6 +4,7 @@
 <title>One Touch Media | Isaac Uduka, Graphic Designer</title>
 <meta name="description" content="One Touch Media is the design studio of Isaac Uduka, a graphic designer in Nigeria with 5+ years of experience in brand identity, logo design, marketing and advertising, social media and packaging design.">
 <meta name="theme-color" content="#0B4A1E">
+<script>try{var t=localStorage.getItem("otm-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="canonical" href="https://onetouchmedia.vercel.app/">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -116,6 +117,15 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .nav a:not(.cta):hover::after,.nav a.active::after{transform:scaleX(1)}
 .nav .cta{background:var(--brand);color:#fff;margin-left:10px;padding:11px 18px}
 .nav .cta:hover{background:var(--gold);color:#10261A}
+.nav{margin-left:auto}
+.head-actions{display:flex;align-items:center;gap:8px}
+.theme-btn{background:var(--surface);border:1px solid var(--line);border-radius:12px;width:46px;height:46px;cursor:pointer;color:var(--ink);display:grid;place-items:center;transition:background .2s,color .2s,border-color .2s}
+.theme-btn:hover{border-color:var(--gold);color:var(--brand-text)}
+.theme-btn svg{width:20px;height:20px}
+.theme-btn .sun{display:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .theme-btn .sun{display:block}:root:not([data-theme="light"]) .theme-btn .moon{display:none}}
+:root[data-theme="dark"] .theme-btn .sun{display:block}
+:root[data-theme="dark"] .theme-btn .moon{display:none}
 .menu-btn{display:none;background:var(--surface);border:1px solid var(--line);border-radius:12px;width:46px;height:46px;cursor:pointer;color:var(--ink)}
 .menu-btn span{display:block;width:18px;height:2px;background:currentColor;margin:4px auto;transition:transform .3s,opacity .3s}
 .menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
@@ -404,7 +414,6 @@ footer{background:var(--band);color:color-mix(in srgb,var(--band-ink) 65%,transp
       <img class="logo-l" src="assets/logo-green.png" alt="One Touch Media" width="1438" height="346">
       <img class="logo-d" src="assets/logo-white.png" alt="One Touch Media" width="1438" height="346">
     </a>
-    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="#services">Services</a>
       <a href="#cases">Case Studies</a>
@@ -413,6 +422,13 @@ footer{background:var(--band);color:color-mix(in srgb,var(--band-ink) 65%,transp
       <a href="#about">About</a>
       <a href="#contact" class="cta">Get in touch</a>
     </nav>
+    <div class="head-actions">
+      <button class="theme-btn" type="button" aria-label="Switch to dark mode">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
+      </button>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
@@ -798,4 +814,20 @@ footer{background:var(--band);color:color-mix(in srgb,var(--band-ink) 65%,transp
 })();
 </script>
 
+<script>
+(function(){
+  var root=document.documentElement, btn=document.querySelector(".theme-btn"), meta=document.querySelector('meta[name="theme-color"]');
+  var mq=window.matchMedia("(prefers-color-scheme: dark)");
+  function isDark(){ var t=root.getAttribute("data-theme"); return t ? t==="dark" : mq.matches; }
+  function sync(){ var d=isDark(); btn.setAttribute("aria-label", d ? "Switch to light mode" : "Switch to dark mode"); btn.setAttribute("aria-pressed", d); if(meta) meta.setAttribute("content", d ? "#08150D" : "#0B4A1E"); }
+  btn.addEventListener("click", function(){
+    var next=isDark() ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try{ localStorage.setItem("otm-theme", next); }catch(e){}
+    sync();
+  });
+  if(mq.addEventListener) mq.addEventListener("change", sync);
+  sync();
+})();
+</script>
 </body></html>
