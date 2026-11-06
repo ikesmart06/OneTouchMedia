@@ -1,186 +1,801 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clean Portfolio</title>
-  <link rel="stylesheet" href="/Onetouch.css/index.css" />
-  <link rel="icon" type="image/x-icon" href="/assets/mouse.png">
-  <link href="https://fonts.cdnfonts.com/css/lufga" rel="stylesheet">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
-</head>
-<body>
- 
-    <header class="navbar">
-  <div class="nav-container">
-    <div class="logo">
-      <img src="/assets/21.png" alt="">
-    </div>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 
-    <nav class="nav-links">
-      <a href="#home">Home</a>
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>One Touch Media | Isaac Uduka, Graphic Designer</title>
+<meta name="description" content="One Touch Media is the design studio of Isaac Uduka, a graphic designer in Nigeria with 5+ years of experience in brand identity, logo design, marketing and advertising, social media and packaging design.">
+<meta name="theme-color" content="#0B4A1E">
+<link rel="canonical" href="https://onetouchmedia.vercel.app/">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="One Touch Media">
+<meta property="og:title" content="One Touch Media | Isaac Uduka, Graphic Designer">
+<meta property="og:description" content="Brand identity, logos, marketing campaigns, social media and packaging design that people remember at first touch.">
+<meta property="og:url" content="https://onetouchmedia.vercel.app/">
+<meta property="og:image" content="https://onetouchmedia.vercel.app/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "One Touch Media",
+  "description": "Graphic design studio of Isaac Uduka: brand identity, logo, marketing, social media and packaging design.",
+  "url": "https://onetouchmedia.vercel.app/",
+  "logo": "https://onetouchmedia.vercel.app/assets/logo-green.png",
+  "image": "https://onetouchmedia.vercel.app/assets/og-image.jpg",
+  "telephone": "+2348108082282",
+  "email": "onetouchmediaofficial@gmail.com",
+  "founder": { "@type": "Person", "name": "Isaac Uduka", "jobTitle": "Graphic Designer" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Abuja", "addressCountry": "NG" },
+  "sameAs": [
+    "https://www.instagram.com/onetouchmedia_ng",
+    "https://www.linkedin.com/in/isaac-uduka-499966176"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap">
+
+<style>
+/* Layout: speckled press-paper page (from Isaac's own portfolio boards), brand-green bands,
+   the four service colours (green, gold, lime, red) as the only accents. 1200px column. */
+:root{
+  --paper:#F4F6F1;
+  --surface:#FFFFFF;
+  --ink:#10261A;
+  --muted:#55685A;
+  --line:#DCE3D8;
+  --brand:#0B4A1E;        /* One Touch green */
+  --brand-text:#0B4A1E;   /* green used as text colour */
+  --band:#0B4A1E;         /* green band background (both themes) */
+  --band-ink:#F4F6F1;
+  --gold:#E8B320;
+  --lime:#8CC63F;
+  --red:#D02B37;
+  --grain-opacity:.55;
+  --shadow:0 24px 50px -28px rgba(11,40,20,.45);
+  --display:"Outfit","Trebuchet MS",system-ui,sans-serif;
+  --body:"Montserrat","Segoe UI",system-ui,sans-serif;
+  --wrap:1200px;
+  --gl:max(16px, env(safe-area-inset-left, 0px));
+  --gr:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#08150D; --surface:#0F2317; --ink:#EAF2EA; --muted:#A2B7A7; --line:#21402D;
+    --brand:#0B4A1E; --brand-text:#7BCB8E; --band:#0B3D19; --band-ink:#F4F6F1;
+    --grain-opacity:.22; --shadow:0 24px 50px -28px rgba(0,0,0,.8);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#08150D; --surface:#0F2317; --ink:#EAF2EA; --muted:#A2B7A7; --line:#21402D;
+  --brand:#0B4A1E; --brand-text:#7BCB8E; --band:#0B3D19; --band-ink:#F4F6F1;
+  --grain-opacity:.22; --shadow:0 24px 50px -28px rgba(0,0,0,.8);
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.7 var(--body);overflow-x:hidden;position:relative}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;background:url("assets/grain.png") repeat;background-size:520px;opacity:var(--grain-opacity)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) body::after{filter:invert(1)}}
+:root[data-theme="dark"] body::after{filter:invert(1)}
+main,header,footer{position:relative;z-index:2}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.02;margin:0;text-wrap:balance;letter-spacing:-0.025em}
+p{margin:0}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:var(--gl);padding-right:var(--gr)}
+.eyebrow{font:700 .74rem/1.2 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--brand-text);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;height:3px;border-radius:3px;background:var(--gold)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:#10261A;padding:10px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:16px}
+
+/* Logo swap */
+.logo-d{display:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .logo-l{display:none}:root:not([data-theme="light"]) .logo-d{display:block}}
+:root[data-theme="dark"] .logo-l{display:none}
+:root[data-theme="dark"] .logo-d{display:block}
+
+/* ---------- Header ---------- */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--paper)}
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;transition:background .3s,box-shadow .3s}
+.site-head.scrolled{background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.head-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.brand img{height:34px;width:auto}
+.nav{display:flex;align-items:center;gap:2px}
+.nav a{text-decoration:none;font-weight:600;font-size:.95rem;padding:9px 13px;border-radius:999px;position:relative}
+.nav a:not(.cta)::after{content:"";position:absolute;left:13px;right:13px;bottom:4px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav a:not(.cta):hover::after,.nav a.active::after{transform:scaleX(1)}
+.nav .cta{background:var(--brand);color:#fff;margin-left:10px;padding:11px 18px}
+.nav .cta:hover{background:var(--gold);color:#10261A}
+.menu-btn{display:none;background:var(--surface);border:1px solid var(--line);border-radius:12px;width:46px;height:46px;cursor:pointer;color:var(--ink)}
+.menu-btn span{display:block;width:18px;height:2px;background:currentColor;margin:4px auto;transition:transform .3s,opacity .3s}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:860px){
+  .brand img{height:28px}
+  .menu-btn{display:block}
+  .nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:var(--paper);border-bottom:1px solid var(--line);padding:10px var(--gr) 20px var(--gl);clip-path:inset(0 0 100% 0);transition:clip-path .4s cubic-bezier(.7,0,.2,1);box-shadow:var(--shadow)}
+  .nav.open{clip-path:inset(0 0 -40px 0)}
+  .nav a{padding:14px 12px;font-size:1.1rem}
+  .nav a:not(.cta)::after{display:none}
+  .nav .cta{margin:8px 0 0;text-align:center}
+}
+
+/* ---------- Hero ---------- */
+.hero{padding-block:clamp(28px,5vw,64px) clamp(48px,7vw,90px);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,56px);align-items:center}
+.hero-copy{min-width:0}
+.hero h1{font-size:clamp(2.7rem,6.6vw,5.6rem);font-weight:800;color:var(--brand-text);margin-top:18px}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .line > span{display:inline-block;animation:lineUp .9s cubic-bezier(.2,.8,.2,1) both}
+.hero h1 .line:nth-child(2) > span{animation-delay:.1s}
+.hero h1 .line:nth-child(3) > span{animation-delay:.2s}
+.touch{position:relative;color:var(--ink);white-space:nowrap}
+.touch .ink{position:absolute;left:-.08em;right:-.08em;bottom:.08em;height:.28em;background:var(--gold);z-index:-1;border-radius:3px;transform:scaleX(0);transform-origin:left;animation:inkIn .5s 1.75s cubic-bezier(.7,0,.2,1) forwards}
+.hero-cursor{position:absolute;width:.62em;height:.62em;right:-.6em;top:.08em;color:var(--ink);animation:cursorIn 1.1s .7s cubic-bezier(.3,.7,.2,1) both, tap .25s 1.65s ease-in-out both}
+.hero-cursor .rays{opacity:0;transform-origin:22% 20%;animation:rays .7s 1.72s ease-out both}
+.hero .lede{font-size:clamp(1.05rem,1.5vw,1.18rem);color:var(--muted);max-width:40ch;margin-top:22px;animation:fadeUp .8s .45s both}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;animation:fadeUp .8s .55s both}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font:700 .98rem/1 var(--body);text-decoration:none;border:2px solid transparent;transition:transform .2s,background .2s,color .2s,border-color .2s,box-shadow .2s;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-wa{background:#25D366;color:#06260F;box-shadow:0 14px 30px -14px rgba(37,211,102,.8)}
+.btn-wa:hover{background:#1FBE5A}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.stats{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:40px;animation:fadeUp .8s .7s both}
+.stat b{display:block;font:800 clamp(1.9rem,3vw,2.4rem)/1 var(--display);color:var(--brand-text);font-variant-numeric:tabular-nums}
+.stat span{font-size:.85rem;color:var(--muted);font-weight:500}
+
+.portrait{position:relative;justify-self:center;width:min(100%,460px);animation:fadeUp 1s .25s both}
+.portrait .blob{position:absolute;inset:0;transform:translate(18px,18px);background:var(--brand);border-radius:999px 999px 28px 28px;overflow:hidden}
+.portrait .blob::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(232,179,32,.45),transparent 55%),radial-gradient(circle at 85% 70%,rgba(140,198,63,.35),transparent 50%)}
+.portrait img{position:relative;width:100%;height:auto;aspect-ratio:1000/1233;object-fit:cover}
+.portrait .cut{position:relative;border-radius:999px 999px 28px 28px;overflow:hidden;background:#F6F6F4;box-shadow:var(--shadow)}
+.badge{position:absolute;left:-6%;top:8%;width:118px;height:118px;color:var(--brand-text);animation:spin 18s linear infinite}
+.badge text{font:700 10.4px var(--body);letter-spacing:2.6px;fill:currentColor}
+.badge-core{position:absolute;left:calc(-6% + 37px);top:calc(8% + 37px);width:44px;height:44px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:#10261A}
+.badge-core svg{width:22px;height:22px}
+.chip{position:absolute;display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);padding:8px 12px 8px 8px;border-radius:14px;font-weight:700;font-size:.82rem;box-shadow:var(--shadow);animation:bob 5s ease-in-out infinite}
+.chip i{width:26px;height:26px;border-radius:7px;display:grid;place-items:center;font:800 .72rem/1 var(--display);font-style:normal;color:#fff}
+.chip.c1{right:-4%;top:30%}
+.chip.c1 i{background:#3BB44A}
+.chip.c2{right:2%;bottom:16%;animation-delay:-1.6s}
+.chip.c2 i{background:#001E36;color:#31A8FF}
+.chip.c3{left:-2%;bottom:30%;animation-delay:-3.2s}
+.chip.c3 i{background:linear-gradient(135deg,#00C4CC,#7D2AE8)}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .portrait{width:min(100%,380px)}
+  .hero-cursor{display:none}
+}
+@media (max-width:420px){.chip{font-size:.74rem}.chip.c1{right:0}.chip.c3{left:0}.badge{left:0;width:96px;height:96px}.badge-core{left:28px;top:calc(8% + 28px);width:40px;height:40px}}
+
+@keyframes lineUp{from{transform:translateY(105%)}to{transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes inkIn{to{transform:scaleX(1)}}
+@keyframes cursorIn{from{opacity:0;transform:translate(1.6em,1.2em)}to{opacity:1;transform:none}}
+@keyframes tap{50%{transform:scale(.82)}}
+@keyframes rays{0%{opacity:0;transform:scale(.4)}40%{opacity:1}100%{opacity:1;transform:scale(1)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bob{50%{transform:translateY(-10px)}}
+
+/* ---------- Client marquee ---------- */
+.clients{background:var(--band);color:var(--band-ink);overflow:hidden;padding-block:20px;position:relative;z-index:2}
+.clients .track{display:flex;width:max-content;animation:scroll 40s linear infinite}
+.clients:hover .track{animation-play-state:paused}
+.clients span{font:700 clamp(1.05rem,2vw,1.4rem)/1 var(--display);white-space:nowrap;display:flex;align-items:center;gap:28px;padding-right:28px}
+.clients span::after{content:"";width:14px;height:14px;background:var(--gold);-webkit-mask:var(--spark) center/contain no-repeat;mask:var(--spark) center/contain no-repeat}
+.clients span:nth-child(4n+2)::after{background:var(--lime)}
+.clients span:nth-child(4n+3)::after{background:var(--red)}
+.clients span:nth-child(4n)::after{background:#fff}
+:root{--spark:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z'/%3E%3C/svg%3E")}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- Sections ---------- */
+section{scroll-margin-top:84px}
+.band{padding-block:clamp(70px,9vw,124px)}
+.sec-head{display:grid;gap:16px;margin-bottom:clamp(34px,5vw,60px);max-width:760px}
+.sec-head h2{font-size:clamp(2.1rem,4.6vw,3.6rem);font-weight:800;color:var(--brand-text)}
+.sec-head p{color:var(--muted);font-size:1.06rem;max-width:58ch}
+.squiggle{width:min(240px,60%);height:auto;color:var(--gold);margin-top:-4px}
+.squiggle path{stroke-dasharray:700;stroke-dashoffset:0}
+.squiggle.draw path{animation:draw 1.4s .2s cubic-bezier(.6,0,.2,1) both}
+@keyframes draw{from{stroke-dashoffset:700}to{stroke-dashoffset:0}}
+
+/* Services */
+.services-list{display:grid;gap:14px}
+.svc{--c:var(--brand);display:grid;grid-template-columns:auto 1fr auto;gap:clamp(16px,3vw,40px);align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3vw,32px) clamp(20px,3vw,36px);position:relative;overflow:hidden;isolation:isolate;transition:color .45s,border-color .45s,transform .3s}
+.svc::before{content:"";position:absolute;inset:0;background:var(--c);transform:translateX(-101%);transition:transform .55s cubic-bezier(.7,0,.2,1);z-index:-1}
+.svc:hover,.svc:focus-within{border-color:var(--c);color:var(--svc-ink,#fff)}
+.svc:hover::before,.svc:focus-within::before{transform:none}
+.svc .num{font:800 clamp(3.4rem,7vw,5.4rem)/.8 var(--display);color:var(--c);transition:color .45s;min-width:.7em}
+.svc:hover .num,.svc:focus-within .num{color:var(--svc-ink,#fff)}
+.svc h3{font-size:clamp(1.35rem,2.4vw,1.9rem);font-weight:700}
+.svc p{color:var(--muted);margin-top:8px;max-width:62ch;transition:color .45s}
+.svc:hover p,.svc:focus-within p{color:inherit;opacity:.9}
+.svc .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.svc .tags span{font-size:.76rem;font-weight:600;border:1px solid currentColor;border-radius:999px;padding:5px 10px;opacity:.75}
+.svc .go{width:54px;height:54px;border-radius:50%;border:2px solid currentColor;display:grid;place-items:center;text-decoration:none;transition:transform .3s}
+.svc .go svg{width:20px;height:20px}
+.svc:hover .go{transform:rotate(-45deg)}
+.svc.s1{--c:#0B4A1E}
+.svc.s2{--c:#E0A91A;--svc-ink:#1C1606}
+.svc.s3{--c:#7DB834;--svc-ink:#0E2006}
+.svc.s4{--c:#D02B37}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .svc.s1{--c:#3FA35E}}
+:root[data-theme="dark"] .svc.s1{--c:#3FA35E}
+@media (max-width:640px){.svc{grid-template-columns:auto 1fr}.svc .go{display:none}}
+
+/* Case studies */
+.cases{display:grid;gap:clamp(60px,8vw,110px)}
+.case{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(24px,4vw,60px);align-items:center}
+.case:nth-child(even){grid-template-columns:1fr 1.25fr}
+.case:nth-child(even) .case-media{order:2}
+.case-media{position:relative;min-width:0}
+.case-media .main{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);cursor:zoom-in;background:var(--line)}
+.case-media .main img{width:100%;aspect-ratio:1600/866;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.case-media .main:hover img{transform:scale(1.04)}
+.case-media .thumb{position:absolute;width:38%;right:-4%;bottom:-14%;border-radius:14px;overflow:hidden;border:5px solid var(--paper);box-shadow:var(--shadow);cursor:zoom-in;transition:transform .4s}
+.case-media .thumb:hover{transform:translateY(-6px) rotate(-1.5deg)}
+.case-media .thumb img{width:100%;aspect-ratio:1600/1359;object-fit:cover}
+.case:nth-child(even) .thumb{right:auto;left:-4%}
+.case-text{display:grid;gap:14px;min-width:0}
+.case-text .meta{display:flex;flex-wrap:wrap;gap:8px}
+.case-text .meta span{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 11px}
+.case-text h3{font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:800}
+.case-text p{color:var(--muted)}
+.case-text ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.case-text li{display:flex;gap:10px;color:var(--muted)}
+.case-text li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:.6em}
+.case-text li b{color:var(--ink)}
+.case-text .more{font-weight:700;color:var(--brand-text);background:none;border:0;padding:0;cursor:pointer;font:inherit;font-weight:700;justify-self:start;display:inline-flex;gap:8px;align-items:center}
+.case-text .more:hover{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:860px){
+  .case,.case:nth-child(even){grid-template-columns:1fr}
+  .case:nth-child(even) .case-media{order:0}
+  .case-media{margin-bottom:12%}
+}
+
+/* Logo wall */
+.logos{background:var(--surface);border-block:1px solid var(--line)}
+.logo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.logo-card{background:#FBFCFA;border:1px solid var(--line);border-radius:16px;padding:22px 18px 16px;display:grid;grid-template-rows:140px auto;gap:14px;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;color:#10261A}
+.logo-card:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:var(--shadow)}
+.logo-card .mark{display:grid;place-items:center;min-height:0}
+.logo-card img{max-height:130px;width:auto;max-width:100%;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1) contrast(1.05);transition:filter .4s}
+.logo-card:hover img{filter:none}
+.logo-card h4{font:700 .98rem/1.25 var(--display);letter-spacing:0}
+.logo-card p{font-size:.78rem;color:#55685A;display:flex;justify-content:space-between;gap:8px}
+.logo-card p b{font-weight:700;color:#0B4A1E;font-variant-numeric:tabular-nums}
+@media (max-width:960px){.logo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.logo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.logo-card{grid-template-rows:100px auto;padding:16px 12px 12px}.logo-card img{max-height:92px}}
+
+/* Gallery */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.filters button{font:700 .9rem/1 var(--body);padding:12px 17px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;transition:all .25s}
+.filters button:hover{border-color:var(--ink)}
+.filters button[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+.filters .count{opacity:.6;margin-left:6px;font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.item{margin:0;position:relative;border-radius:16px;overflow:hidden;cursor:zoom-in;background:var(--line);aspect-ratio:4/3;transition:opacity .4s,transform .4s}
+.item.wide{grid-column:span 2;aspect-ratio:auto}
+.item img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.item:hover img{transform:scale(1.05)}
+.item figcaption{position:absolute;inset:auto 0 0 0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(6,26,12,.88));color:#fff;display:flex;justify-content:space-between;align-items:end;gap:8px;transform:translateY(30%);opacity:0;transition:all .4s}
+.item figcaption b{font:700 1rem/1.2 var(--display)}
+.item figcaption span{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+.item:hover figcaption,.item:focus-visible figcaption{transform:none;opacity:1}
+.item.hide{display:none}
+@media (hover:none){.item figcaption{transform:none;opacity:1}}
+@media (max-width:860px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}.item.wide{grid-column:auto}}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,72px);align-items:center}
+.about-card{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);transform:rotate(-2deg);transition:transform .5s}
+.about-card:hover{transform:rotate(0)}
+.about-card img{width:100%;aspect-ratio:1400/1250;object-fit:cover}
+.about-text{display:grid;gap:18px;max-width:62ch;min-width:0}
+.about-text h2{font-size:clamp(2.1rem,4.6vw,3.6rem);font-weight:800;color:var(--brand-text)}
+.about-text .big{font:600 clamp(1.15rem,2vw,1.4rem)/1.5 var(--body)}
+.about-text p{color:var(--muted)}
+.about-text .big{color:var(--ink)}
+.tools{display:flex;flex-wrap:wrap;gap:10px}
+.tool{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 16px 10px 10px;font-weight:700;font-size:.92rem}
+.tool i{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font:800 .82rem/1 var(--display);font-style:normal;color:#fff}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}.about-card{max-width:520px}}
+
+/* Contact */
+.contact{background:var(--band);color:var(--band-ink);position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;width:640px;height:640px;right:-200px;top:-260px;border-radius:50%;background:radial-gradient(circle,rgba(232,179,32,.28),transparent 65%);pointer-events:none}
+.contact .eyebrow{color:var(--gold)}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,72px);align-items:start;position:relative}
+.contact h2{font-size:clamp(2.6rem,7vw,5.6rem);font-weight:800;margin-top:14px}
+.contact h2 em{font-style:normal;color:var(--gold)}
+.contact .squiggle{color:var(--lime)}
+.contact p.sub{color:color-mix(in srgb,var(--band-ink) 78%,transparent);margin-top:14px;max-width:44ch;font-size:1.08rem}
+.contact .hero-actions{animation:none}
+.contact .btn-line{border-color:color-mix(in srgb,var(--band-ink) 50%,transparent);color:var(--band-ink)}
+.contact .btn-line:hover{background:var(--band-ink);color:#0B4A1E}
+.cards{display:grid;gap:12px}
+.ccard{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05)}
+.ccard > div{min-width:0}
+.ccard small{display:block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:color-mix(in srgb,var(--band-ink) 62%,transparent)}
+.ccard a,.ccard strong{text-decoration:none;font-weight:700;font-size:1.05rem;overflow-wrap:anywhere}
+.ccard a:hover{color:var(--gold)}
+.copy{font:700 .72rem/1 var(--body);letter-spacing:.1em;text-transform:uppercase;background:transparent;color:var(--band-ink);border:1px solid rgba(255,255,255,.3);padding:10px 13px;border-radius:999px;cursor:pointer;flex:none}
+.copy:hover{background:var(--gold);border-color:var(--gold);color:#10261A}
+.socials{display:flex;gap:10px;margin-top:6px}
+.socials a{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(255,255,255,.25);transition:background .2s,transform .2s,color .2s}
+.socials a:hover{background:var(--gold);color:#10261A;transform:translateY(-3px)}
+.socials svg{width:20px;height:20px}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+
+footer{background:var(--band);color:color-mix(in srgb,var(--band-ink) 65%,transparent);border-top:1px solid rgba(255,255,255,.1);font-size:.88rem}
+.foot-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding-block:26px max(26px,env(safe-area-inset-bottom,0px))}
+.foot-in img{height:26px;width:auto}
+.foot-in a{text-decoration:none}
+.foot-in a:hover{color:var(--gold)}
+
+/* Floating */
+.wa-float{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:70;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);transition:transform .25s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:31px;height:31px}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:ring 2.4s infinite}
+.wa-tip{position:absolute;right:70px;white-space:nowrap;background:var(--surface);color:var(--ink);border:1px solid var(--line);padding:8px 12px;border-radius:12px;font-size:.82rem;font-weight:700;box-shadow:var(--shadow);opacity:0;transform:translateX(8px);transition:all .3s;pointer-events:none}
+.wa-float:hover .wa-tip,.wa-tip.show{opacity:1;transform:none}
+@keyframes ring{from{transform:scale(1);opacity:.7}to{transform:scale(1.55);opacity:0}}
+.to-top{position:fixed;right:max(27px,calc(env(safe-area-inset-right,0px) + 9px));bottom:calc(max(18px,env(safe-area-inset-bottom,0px)) + 74px);z-index:70;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;display:grid;place-items:center;opacity:0;transform:translateY(10px);pointer-events:none;transition:all .3s;font-size:1.1rem}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+.progress{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:100%;background:linear-gradient(90deg,var(--brand),var(--lime),var(--gold),var(--red));transform-origin:left;transform:scaleX(0);z-index:80}
+
+/* Click burst (the "one touch") */
+.burst{position:fixed;width:44px;height:44px;margin:-22px 0 0 -22px;pointer-events:none;z-index:300}
+.burst i{position:absolute;left:50%;top:50%;width:3px;height:10px;margin:-5px 0 0 -1.5px;border-radius:3px;background:var(--gold);animation:burst .55s ease-out forwards}
+@keyframes burst{from{transform:rotate(var(--r)) translateY(-6px) scaleY(.4);opacity:1}to{transform:rotate(var(--r)) translateY(-22px) scaleY(1);opacity:0}}
+
+/* Scroll reveal: JS only hides elements below the fold; a timer reveals everything after 3s */
+.reveal-pending{opacity:0;transform:translateY(30px)}
+.reveal-in{opacity:1;transform:none;transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.case-media.reveal-pending{opacity:1;transform:none;clip-path:inset(0 100% 0 0)}
+.case-media.reveal-in{clip-path:inset(-20% -20% -30% -20%);transition:clip-path 1.1s cubic-bezier(.7,0,.2,1)}
+
+/* Lightbox */
+.lb{position:fixed;inset:0;z-index:400;background:rgba(4,16,8,.95);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;padding:max(16px,env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));opacity:0;pointer-events:none;transition:opacity .3s}
+.lb.open{opacity:1;pointer-events:auto}
+.lb figure{margin:0;display:grid;justify-items:center;gap:14px;min-width:0}
+.lb img{max-height:82vh;max-width:100%;width:auto;border-radius:8px;transform:scale(.95);transition:transform .35s}
+.lb.open img{transform:none}
+.lb figcaption{color:#DCE8DE;font-weight:600;font-size:.9rem;text-align:center}
+.lb figcaption span{color:var(--gold);margin-left:8px;font-variant-numeric:tabular-nums}
+.lb button{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;width:50px;height:50px;border-radius:50%;cursor:pointer;font-size:1.4rem;display:grid;place-items:center}
+.lb button:hover{background:var(--gold);color:#10261A}
+.lb .close{position:absolute;top:max(16px,env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px))}
+@media (max-width:600px){.lb{grid-template-columns:1fr}.lb .prev,.lb .next{position:absolute;bottom:max(22px,env(safe-area-inset-bottom,0px))}.lb .prev{left:28%}.lb .next{right:28%}}
+
+.toast{position:fixed;left:50%;bottom:max(24px,env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:var(--paper);padding:12px 18px;border-radius:999px;font-weight:700;font-size:.9rem;opacity:0;transition:all .3s;z-index:500;pointer-events:none;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .touch .ink{transform:scaleX(1)}
+  .hero-cursor .rays{opacity:1}
+  .reveal-pending{opacity:1;transform:none;clip-path:none!important}
+}
+</style>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="#home" aria-label="One Touch Media, home">
+      <img class="logo-l" src="assets/logo-green.png" alt="One Touch Media" width="1438" height="346">
+      <img class="logo-d" src="assets/logo-white.png" alt="One Touch Media" width="1438" height="346">
+    </a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#logos">Logos</a>
+      <a href="#work">Portfolio</a>
       <a href="#about">About</a>
-      <a href="#services">What We Do</a>
-
-      <div class="dropdown">
-        <button class="dropbtn">Gallery ▾</button>
-        <div class="dropdown-content">
-          <a href="#gallery1">Visual & Branding Identity</a>
-          <a href="#gallery2">Marketing & Advertising</a>
-          <a href="#gallery3">Social Media Design</a>
-          <a href="#gallery4">Package & Product Design</a>
-        </div>
-      </div>
+      <a href="#contact" class="cta">Get in touch</a>
     </nav>
-
-    <div class="menu-toggle">☰</div>
   </div>
 </header>
 
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow" style="animation:fadeUp .7s both">Isaac Uduka · Graphic Designer</p>
+        <h1>
+          <span class="line"><span>Brands people</span></span>
+          <span class="line"><span>remember at</span></span>
+          <span class="line"><span><span class="touch">first touch.<span class="ink" aria-hidden="true"></span>
+            <svg class="hero-cursor" viewBox="0 0 60 60" aria-hidden="true">
+              <g class="rays" fill="none" stroke="var(--gold)" stroke-width="4.5" stroke-linecap="round"><path d="M8 2v7"/><path d="M-2 8l5 4"/><path d="M18 6l-4 4"/><path d="M-3 19h6"/></g>
+              <path d="M10 13l38 14-15 5 11 15-6 5-11-15-7 13z" fill="var(--paper)" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"/>
+            </svg></span></span></span>
+        </h1>
+        <p class="lede">One Touch Media designs logos, brand identities, campaign flyers, social media content and packaging for businesses, NGOs and public figures across Nigeria.</p>
+        <div class="hero-actions">
+          <a class="btn btn-wa" href="https://wa.me/2348108082282?text=Hello%20One%20Touch%20Media%2C%20I%27d%20like%20to%20discuss%20a%20design%20project." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+            Chat on WhatsApp</a>
+          <a class="btn btn-line" href="#cases">See my work</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b data-count="5">5</b><span>years of experience</span></div>
+          <div class="stat"><b data-count="12">12</b><span>logos in this portfolio</span></div>
+          <div class="stat"><b data-count="4">4</b><span>design services</span></div>
+        </div>
+      </div>
 
-  <!-- INTRO -->
-  <section class="intro" id="home">
-    <img src="/assets/1.jpeg" alt="Intro Image">
+      <div class="portrait">
+        <div class="blob" aria-hidden="true"></div>
+        <div class="cut"><img src="assets/img/isaac-uduka.webp" alt="Isaac Uduka, founder of One Touch Media, in a tan suit and green tie" width="1000" height="1233" fetchpriority="high"></div>
+        <svg class="badge" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="circ" d="M60 60m-48 0a48 48 0 1 1 96 0a48 48 0 1 1-96 0"/></defs>
+          <text><textPath href="#circ">OPEN FOR PROJECTS • ONETOUCH MEDIA • </textPath></text>
+        </svg>
+        <div class="badge-core" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></div>
+        <div class="chip c1"><i>Cd</i>CorelDRAW</div>
+        <div class="chip c2"><i>Ps</i>Photoshop</div>
+        <div class="chip c3"><i>C</i>Canva</div>
+      </div>
+    </div>
   </section>
 
-  <!-- ABOUT SECTION -->
- <section class="about-reveal" id="about">
-  <div class="about-img">
-    <img src="/assets/2.jpeg" alt="">
-  </div>
-
-  <div class="about-text">
-    <h2>About Me</h2>
-    <p>
-      <strong style="font-size: larger;">I’m Isaac</strong>, a visual storyteller who believes that every brand has a narrative worth telling. My journey from managing high-end facilities to founding One Touch Media has taught me one vital thing: great design is rooted in deep understanding.Whether I’m conceptualizing a new logo or directing a full brand revamp, my goal is to blend aesthetic excellence with functional precision. Specializing in brand identity and digital communication, I leverage my expertise in Corel Draw and Photoshop to help businesses build cohesive, memorable identities. My background in bilingual communication allows me to bridge gaps for international brands, ensuring every design speaks clearly to its intended audience.
-
-Currently open to new collaborations. Let’s create something exceptional together.
-    </p>
-  </div>
-</section>
-
-  <!-- services -->
-  
-<section class="services" id="services">
-
-  <h2 class="services-title-reveal">What We Do</h2>
-
-  <figure class="services-item-reveal">
-    <img src="/assets/3.jpg" alt="">
-  </figure>
-
-  <figure class="services-item-reveal">
-    <img src="/assets/10.jpeg" alt="">
-  </figure>
-
-</section>
-    
-<main>
-    <!-- GALLERY -->
-<section class="gallery-section">
-
-  <h2 class="section-title">Gallery</h2>
-
-  <!-- BRANDING -->
-  <div class="gallery-group-reveal" id="gallery1">
-    <h3>Visual & Branding Identity</h3>
-    <div class="gallery">
-      <img src="/assets/4.jpg">
-      <img src="/assets/5.jpg">
-      <img src="/assets/6.jpg">
-      <img src="/assets/7.jpg">
-      <img src="/assets/8.jpg">
-      <img src="/assets/9.jpg">
-      <img src="/assets/15.JPG">
-      <img src="/assets/16.JPG">
+  <div class="clients" aria-label="Clients">
+    <div class="track">
+      <span>Coalition: For the PACT Nigeria</span><span>The Forge Brookside</span><span>Crystal Academy</span><span>Adeola Azeez Community Care Foundation</span><span>Mind To Mind Initiative Africa</span><span>La Belle Cakes</span><span>Sendit Logistics</span><span>Precision Learning Hub</span><span>Nifemi Store</span><span>One Touch Autos</span>
+      <span aria-hidden="true">Coalition: For the PACT Nigeria</span><span aria-hidden="true">The Forge Brookside</span><span aria-hidden="true">Crystal Academy</span><span aria-hidden="true">Adeola Azeez Community Care Foundation</span><span aria-hidden="true">Mind To Mind Initiative Africa</span><span aria-hidden="true">La Belle Cakes</span><span aria-hidden="true">Sendit Logistics</span><span aria-hidden="true">Precision Learning Hub</span><span aria-hidden="true">Nifemi Store</span><span aria-hidden="true">One Touch Autos</span>
     </div>
   </div>
 
-  <!-- MARKETING -->
-  <div class="gallery-group-reveal" id="gallery2">
-    <h3>Marketing & Advertising</h3>
-    <div class="gallery">
-      <img src="/assets/14.JPG">
-      <img src="/assets/13.JPG">
+  <!-- SERVICES -->
+  <section class="band" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow reveal">What we do</p>
+        <h2 class="reveal">Four ways we make your brand look the part.</h2>
+        <svg class="squiggle reveal" viewBox="0 0 260 60" fill="none" aria-hidden="true"><path d="M20 30C70 14 130 6 150 16c16 8-60 30-64 38-3 6 40 2 110 4 30 1 50 4 60 6" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="services-list">
+        <article class="svc s1 reveal">
+          <span class="num" aria-hidden="true">1</span>
+          <div>
+            <h3>Visual &amp; Brand Identity Design</h3>
+            <p>A logo works best when it grows out of who you are. We start with your values and audience, then turn them into a logo, colour palette and typography that make your business instantly recognisable.</p>
+            <div class="tags"><span>Logos</span><span>Colour palettes</span><span>Brand guidelines</span><span>Stationery</span><span>Rebrands</span></div>
+          </div>
+          <a class="go" href="#cases" aria-label="See brand identity case studies"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="svc s2 reveal">
+          <span class="num" aria-hidden="true">2</span>
+          <div>
+            <h3>Marketing &amp; Advertising Design</h3>
+            <p>Brand design defines who you are; marketing design tells the world and helps you sell. We create flyers, posters, event and campaign graphics that grab attention and get people to act.</p>
+            <div class="tags"><span>Flyers</span><span>Posters</span><span>Event campaigns</span><span>Invitations</span><span>Banners</span></div>
+          </div>
+          <a class="go" href="#work" data-jump="marketing" aria-label="See marketing work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="svc s3 reveal">
+          <span class="num" aria-hidden="true">3</span>
+          <div>
+            <h3>Social Media Design</h3>
+            <p>Content made for Instagram, X, LinkedIn, TikTok and Facebook that stops the scroll. We design consistent post series for brands, foundations and public figures, from monthly greetings to national days.</p>
+            <div class="tags"><span>Instagram posts</span><span>X posts</span><span>Carousels</span><span>Event promos</span></div>
+          </div>
+          <a class="go" href="#work" data-jump="social" aria-label="See social media work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="svc s4 reveal">
+          <span class="num" aria-hidden="true">4</span>
+          <div>
+            <h3>Package &amp; Product Design</h3>
+            <p>Where form, function and branding meet. We design book covers, merchandise and product packaging that protects what you sell and makes customers choose it over the competition.</p>
+            <div class="tags"><span>Book covers</span><span>Merchandise</span><span>Labels</span><span>Packaging</span></div>
+          </div>
+          <a class="go" href="#work" data-jump="packaging" aria-label="See packaging work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- SOCIAL -->
-  <div class="gallery-group-reveal" id="gallery3">
-    <h3>Social Media Design</h3>
-    <div class="gallery">
-      <img src="/assets/12.JPG">
-      <img src="/assets/11.JPG">
-       <img src="/assets/Portofolio Page 24.jpeg">
+  <!-- CASE STUDIES -->
+  <section class="band" id="cases" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow reveal">Featured case studies</p>
+        <h2 class="reveal">Brand identities built from the ground up.</h2>
+        <p class="reveal">Each identity starts with the client’s story, then carries across every touchpoint: shirts, caps, signage, vehicles and business cards.</p>
+      </div>
+
+      <div class="cases">
+        <article class="case">
+          <div class="case-media reveal">
+            <div class="main" data-lb="Coalition: For the PACT Nigeria, brand identity" tabindex="0" role="button" aria-label="View Coalition identity full size"><img src="assets/img/coalition-identity.webp" alt="Coalition For the PACT Nigeria logo of intertwining blue, orange and green ovals over joined hands" width="1600" height="866" loading="lazy"></div>
+            <div class="thumb" data-lb="Coalition: brand applications on T-shirt, cap, badge and signage" tabindex="0" role="button" aria-label="View Coalition mockups"><img src="assets/img/coalition-mockups.webp" alt="Coalition brand on T-shirt, cap, pin badge and wall signage" width="1600" height="1359" loading="lazy"></div>
+          </div>
+          <div class="case-text">
+            <div class="meta reveal"><span>NGO</span><span>2025</span><span>Brand identity</span></div>
+            <h3 class="reveal">Coalition: For the PACT Nigeria</h3>
+            <p class="reveal">The mark is called “The PACT Nexus”. Its intertwining ovals stand for the civil society organisations and youth networks coming together to deliver the PACT for the Future in Nigeria.</p>
+            <ul class="reveal">
+              <li><span><b>Intertwining ovals:</b> partner CSOs and youth networks</span></li>
+              <li><span><b>Orange link:</b> the connection that turns plans into action</span></li>
+              <li><span><b>Rising shape and circle:</b> the vision of the PACT for the Future</span></li>
+            </ul>
+            <button class="more reveal" type="button" data-open=".case:nth-child(1) .thumb">View brand applications →</button>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-media reveal">
+            <div class="main" data-lb="The Forge Brookside Limited, brand identity" tabindex="0" role="button" aria-label="View The Forge identity full size"><img src="assets/img/the-forge-identity.webp" alt="The Forge Brookside Limited logo in white and yellow over a dark city skyline" width="1600" height="866" loading="lazy"></div>
+            <div class="thumb" data-lb="The Forge: T-shirt, van wrap, bottle and business cards" tabindex="0" role="button" aria-label="View The Forge mockups"><img src="assets/img/the-forge-mockups.webp" alt="The Forge brand on T-shirt, yellow van wrap, water bottle and business cards" width="1600" height="1359" loading="lazy"></div>
+          </div>
+          <div class="case-text">
+            <div class="meta reveal"><span>Fitness &amp; lifestyle</span><span>Abuja</span><span>2025</span></div>
+            <h3 class="reveal">The Forge Brookside Limited</h3>
+            <p class="reveal">A premium fitness-lifestyle brand in Abuja, built as a high-end wellness destination for health-conscious professionals.</p>
+            <ul class="reveal">
+              <li><span><b>Concept:</b> a “Fitness meets Lifestyle” hub that pairs a state-of-the-art gym with luxury social and recovery spaces</span></li>
+              <li><span><b>Focus:</b> an upscale setting with advanced equipment, personal training and group fitness classes</span></li>
+              <li><span><b>Identity:</b> a bold F monogram in black, white and signal yellow</span></li>
+            </ul>
+            <button class="more reveal" type="button" data-open=".case:nth-child(2) .thumb">View brand applications →</button>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-media reveal">
+            <div class="main" data-lb="Crystal Academy, brand identity" tabindex="0" role="button" aria-label="View Crystal Academy identity full size"><img src="assets/img/crystal-academy-identity.webp" alt="Crystal Academy football logo over a young player on a training pitch" width="1600" height="866" loading="lazy"></div>
+            <div class="thumb" data-lb="Crystal Academy: stadium, jersey, flag and jacket applications" tabindex="0" role="button" aria-label="View Crystal Academy mockups"><img src="assets/img/crystal-academy-mockups.webp" alt="Crystal Academy brand on stadium screen, training kit, flag and blue jacket" width="1600" height="1359" loading="lazy"></div>
+          </div>
+          <div class="case-text">
+            <div class="meta reveal"><span>Football academy</span><span>2025</span><span>Brand identity</span></div>
+            <h3 class="reveal">Crystal Academy</h3>
+            <p class="reveal">A football academy that gives young players a nurturing place to build their skills, gain confidence and learn life lessons, backed by high-quality coaching, training and mentorship.</p>
+            <ul class="reveal">
+              <li><span><b>Mark:</b> a football rising like a sun, with a shooting star for ambition</span></li>
+              <li><span><b>Applications:</b> kits, jackets, flags and stadium graphics</span></li>
+            </ul>
+            <button class="more reveal" type="button" data-open=".case:nth-child(3) .thumb">View brand applications →</button>
+          </div>
+        </article>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- PACKAGE -->
-  <div class="gallery-group-reveal" id="gallery4">
-    <h3>Package & Product Design</h3>
-    <div class="gallery">
-      <img src="/assets/17.jpeg">
-      <img src="/assets/18.jpeg">
+  <!-- LOGOS -->
+  <section class="band logos" id="logos">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow reveal">Logo design</p>
+        <h2 class="reveal">Twelve marks, twelve stories.</h2>
+        <p class="reveal">Client projects from 2021 to 2025 across logistics, food, education, NGOs, fashion, automobiles and sport. Hover to see the detail.</p>
+      </div>
+      <div class="logo-grid">
+        <div class="logo-card reveal"><div class="mark"><img src="assets/img/logo-coalition.png" alt="Coalition For the PACT Nigeria logo" loading="lazy"></div><div><h4>Coalition: For the PACT Nigeria</h4><p>NGO <b>2025</b></p></div></div>
+        <div class="logo-card reveal"><div class="mark"><img src="assets/img/logo-the-forge.png" alt="The Forge Brookside Limited logo" loading="lazy"></div><div><h4>The Forge Brookside Ltd</h4><p>Real estate <b>2025</b></p></div></div>
+        <div class="logo-card reveal"><div class="mark"><img src="assets/img/logo-onetouch-autos.png" alt="One Touch Autos logo" loading="lazy"></div><div><h4>One Touch Autos</h4><p>Automobile <b>2025</b></p></div></div>
+        <div class="logo-card reveal"><div class="mark"><img src="assets/img/logo-crystal-academy.png" alt="Crystal Academy logo" loading="lazy"></div><div><h4>Crystal Academy</h4><p>Football academy <b>2025</b></p></div></div>
+        <div class="logo-card reveal"><div class="mark"><img src="assets/img/logo-la-belle.png" alt="La Belle Cakes and Confections logo" loading="lazy"></div><div><h4>La Belle Cakes &amp; Confections</h4><p>Cakes &amp; confections <b>2024</b></p></div></div>
+        <div class="logo-card reveal"><div class="mark"><img src="assets/img/logo-precision.png" alt="Precision Learning Hub logo" loading="lazy"></div><div><h4>Precision Learning Hub</h4><p>Education <b>2024</b></p></div></div>
+        <div class="logo-card reveal"><div class="mark"><img src="assets/img/logo-sendit.png" alt="Sendit Delivery and Logistics Services logo" loading="lazy"></div><div><h4>Sendit Delivery &amp; Logistics</h4><p>Logistics <b>2022</b></p></div></div>
+        <div class="logo-card reveal"><div class="mark"><img src="assets/img/logo-mind-to-mind.png" alt="Mind To Mind Initiative Africa logo" loading="lazy"></div><div><h4>Mind To Mind Initiative Africa</h4><p>NGO <b>2022</b></p></div></div>
+        <div class="logo-card reveal"><div class="mark"><img src="assets/img/logo-middleman.png" alt="Middleman Prime Ventures logo" loading="lazy"></div><div><h4>Middleman Prime Ventures</h4><p>Automobile <b>2021</b></p></div></div>
+        <div class="logo-card reveal"><div class="mark"><img src="assets/img/logo-mr-more.png" alt="Mr. More Restaurant logo" loading="lazy"></div><div><h4>Mr. More Restaurant</h4><p>Restaurant <b>2021</b></p></div></div>
+        <div class="logo-card reveal"><div class="mark"><img src="assets/img/logo-nifemi.png" alt="Nifemi Store logo" loading="lazy"></div><div><h4>Nifemi Store</h4><p>Clothing store <b>2021</b></p></div></div>
+        <div class="logo-card reveal"><div class="mark"><img src="assets/img/logo-morebite.png" alt="MoreBite Restaurant logo" loading="lazy"></div><div><h4>MoreBite Restaurant</h4><p>Restaurant <b>2021</b></p></div></div>
+      </div>
     </div>
-    <div class="thanks">
-      <img src="/assets/23.png">
-</div>
-    
-  </div>
-  
+  </section>
 
-</section>
-
-  </main>
-  <footer class="footer">
-  <div class="footer-inner">
-
-    <!-- Logo -->
-    <div class="footer-logo">
-      <img class="logos" src="/assets/21.png" alt="">
+  <!-- PORTFOLIO -->
+  <section class="band" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow reveal">Portfolio</p>
+        <h2 class="reveal">More recent work</h2>
+        <p class="reveal">Tap any board to view it full size. Swipe or use your arrow keys to move between them.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter portfolio">
+        <button type="button" data-filter="all" aria-pressed="true">All<span class="count"></span></button>
+        <button type="button" data-filter="brand" aria-pressed="false">Brand identity<span class="count"></span></button>
+        <button type="button" data-filter="marketing" aria-pressed="false">Marketing<span class="count"></span></button>
+        <button type="button" data-filter="social" aria-pressed="false">Social media<span class="count"></span></button>
+        <button type="button" data-filter="packaging" aria-pressed="false">Product &amp; package<span class="count"></span></button>
+      </div>
+      <div class="grid">
+        <figure class="item reveal" data-cat="marketing" tabindex="0"><img src="assets/img/marketing-campaigns.webp" alt="Six campaign flyers: ADC 10 Days FCT Invasion, International Youth Day 2025, Year of Flourishing, Abuja Food Drive, Save the Date and Best Cars Best Deals" loading="lazy"><figcaption><b>Campaign flyers &amp; posters</b><span>Marketing</span></figcaption></figure>
+        <figure class="item reveal" data-cat="social" tabindex="0"><img src="assets/img/social-aaccf.webp" alt="Social media posts for Adeola Azeez Community Care Foundation" loading="lazy"><figcaption><b>Adeola Azeez Foundation</b><span>Social media</span></figcaption></figure>
+        <figure class="item reveal" data-cat="packaging" tabindex="0"><img src="assets/img/packaging-products.webp" alt="Book cover for Principles and Practice of Tax, Coalition sweatshirt, cap, wristbands and website" loading="lazy"><figcaption><b>Books &amp; merchandise</b><span>Product</span></figcaption></figure>
+        <figure class="item reveal" data-cat="social" tabindex="0"><img src="assets/img/social-kingibe.webp" alt="Social media posts for Senator Ireti Kingibe for Democracy Day, Youth Day, Children's Day and the Girl Child" loading="lazy"><figcaption><b>Sen. Ireti Kingibe</b><span>Social media</span></figcaption></figure>
+        <figure class="item reveal" data-cat="marketing" tabindex="0"><img src="assets/img/flyers-events.webp" alt="Event flyers: birthday tributes, COUCH university challenge, wedding invitation, conference and city schedule" loading="lazy"><figcaption><b>Events, invitations &amp; tributes</b><span>Marketing</span></figcaption></figure>
+        <figure class="item reveal" data-cat="social" tabindex="0"><img src="assets/img/social-grv.webp" alt="Social media posts for Gbadebo Rhodes-Vivour: new month, Independence Day, Youth Day and Youth O'clock" loading="lazy"><figcaption><b>Gbadebo Rhodes-Vivour</b><span>Social media</span></figcaption></figure>
+        <figure class="item reveal" data-cat="brand" tabindex="0"><img src="assets/img/coalition-mockups.webp" alt="Coalition brand applications" loading="lazy"><figcaption><b>Coalition applications</b><span>Brand</span></figcaption></figure>
+        <figure class="item reveal" data-cat="brand" tabindex="0"><img src="assets/img/the-forge-mockups.webp" alt="The Forge brand applications" loading="lazy"><figcaption><b>The Forge applications</b><span>Brand</span></figcaption></figure>
+        <figure class="item reveal" data-cat="brand" tabindex="0"><img src="assets/img/crystal-academy-mockups.webp" alt="Crystal Academy brand applications" loading="lazy"><figcaption><b>Crystal Academy applications</b><span>Brand</span></figcaption></figure>
+      </div>
     </div>
+  </section>
 
-    <!-- Contact Info -->
-    <div class="footer-contact">
-      <p>📞 +234 8108082282</p>
-      <p>✉️ onetouchmediaofficial@gmail.com</p>
+  <!-- ABOUT -->
+  <section class="band" id="about" style="padding-top:0">
+    <div class="wrap about-grid">
+      <div class="about-card reveal"><img src="assets/img/isaac-uduka-card.webp" alt="Isaac Uduka, Graphic Designer, @onetouchmedia_ng" width="1400" height="1250" loading="lazy"></div>
+      <div class="about-text">
+        <p class="eyebrow reveal">About</p>
+        <h2 class="reveal">Hi, I’m Isaac.</h2>
+        <svg class="squiggle reveal" viewBox="0 0 260 60" fill="none" aria-hidden="true"><path d="M20 30C70 14 130 6 150 16c16 8-60 30-64 38-3 6 40 2 110 4 30 1 50 4 60 6" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+        <p class="big reveal">I’m a graphic designer with 5 years of active experience, and I believe every brand has a story worth telling.</p>
+        <p class="reveal">My path from managing high-end facilities to founding One Touch Media taught me that details matter and that great design starts with understanding the client. Whether I’m creating a new logo or leading a full brand revamp, I combine strong visuals with practical results.</p>
+        <p class="reveal">I have a record of delivering high-quality work that exceeds expectations, and I keep up with the latest design trends and tools. I also communicate in two languages, which helps me design for international brands as well as local ones.</p>
+        <div class="tools reveal">
+          <span class="tool"><i style="background:#3BB44A">Cd</i>CorelDRAW</span>
+          <span class="tool"><i style="background:#001E36;color:#31A8FF">Ps</i>Adobe Photoshop</span>
+          <span class="tool"><i style="background:linear-gradient(135deg,#00C4CC,#7D2AE8)">C</i>Canva</span>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Social Icons -->
-    <div class="footer-socials">
-      <a href="#" aria-label="Facebook">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/onetouchmedia_ng?igsh=MW15ZzAzdXVjeXd4cA%3D%3D&utm_source=qr" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/isaac-uduka-499966176?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" aria-label="LinkedIn">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="#" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
+  <!-- CONTACT -->
+  <section class="band contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="eyebrow reveal">Let’s work together</p>
+        <h2 class="reveal">Thank you. <em>Get in touch</em> today.</h2>
+        <svg class="squiggle reveal" viewBox="0 0 260 60" fill="none" aria-hidden="true"><path d="M20 30C70 14 130 6 150 16c16 8-60 30-64 38-3 6 40 2 110 4 30 1 50 4 60 6" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+        <p class="sub reveal">Tell me about your business and what you need: a logo, a full brand, a campaign or a month of social posts. I usually reply within a day.</p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-wa" href="https://wa.me/2348108082282?text=Hello%20One%20Touch%20Media%2C%20I%27d%20like%20to%20discuss%20a%20design%20project." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+            Chat on WhatsApp</a>
+          <a class="btn btn-line" href="mailto:onetouchmediaofficial@gmail.com?subject=New%20design%20project">Send an email</a>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="ccard reveal"><div><small>Call or WhatsApp</small><a href="tel:+2348108082282">+234 810 808 2282</a></div><button class="copy" type="button" data-copy="+2348108082282">Copy</button></div>
+        <div class="ccard reveal"><div><small>Email</small><a href="mailto:onetouchmediaofficial@gmail.com">onetouchmediaofficial@gmail.com</a></div><button class="copy" type="button" data-copy="onetouchmediaofficial@gmail.com">Copy</button></div>
+        <div class="ccard reveal"><div><small>Based in</small><strong>Abuja, Nigeria · working worldwide</strong></div></div>
+        <div class="socials reveal">
+          <a href="https://www.instagram.com/onetouchmedia_ng" target="_blank" rel="noopener" aria-label="@onetouchmedia_ng on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/in/isaac-uduka-499966176" target="_blank" rel="noopener" aria-label="Isaac Uduka on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21H9z"/></svg></a>
+          <a href="https://wa.me/2348108082282" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20z"/></svg></a>
+        </div>
+      </div>
     </div>
+  </section>
+</main>
 
-    <!-- Divider -->
-    <hr class="footer-divider">
-
-    <!-- Copyright -->
-    <p class="footer-copy">
-      © <span id="year"></span> One Touch Media. All rights reserved.
-    </p>
-
+<footer>
+  <div class="wrap foot-in">
+    <img src="assets/logo-white.png" alt="One Touch Media" width="1438" height="346" loading="lazy">
+    <span>© <span id="year">2026</span> One Touch Media. All rights reserved.</span>
+    <a href="#home">Back to top ↑</a>
   </div>
 </footer>
 
+<a class="wa-float" href="https://wa.me/2348108082282?text=Hello%20One%20Touch%20Media%2C%20I%27d%20like%20to%20discuss%20a%20design%20project." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <span class="wa-tip">Chat with Isaac</span>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+</a>
+<button class="to-top" type="button" aria-label="Back to top">↑</button>
 
+<div class="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="prev" type="button" aria-label="Previous image">‹</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button class="next" type="button" aria-label="Next image">›</button>
+  <button class="close" type="button" aria-label="Close viewer">✕</button>
+</div>
+<div class="toast" role="status" aria-live="polite"></div>
 
-<button class="back-to-top">↑</button>
+<script>
+(function(){
+  var $=function(s,c){return (c||document).querySelector(s)};
+  var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+  var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  $("#year").textContent=new Date().getFullYear();
 
+  // Header state, progress bar, back-to-top, active link
+  var head=$(".site-head"),bar=$(".progress"),top=$(".to-top");
+  var links=$$(".nav a[href^='#']");
+  var secs=links.map(function(a){return $(a.getAttribute("href"))}).filter(Boolean);
+  function onScroll(){
+    var y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+    head.classList.toggle("scrolled",y>8);
+    bar.style.transform="scaleX("+(h>0?y/h:0)+")";
+    top.classList.toggle("show",y>800);
+    var cur=null; secs.forEach(function(s){ if(s.getBoundingClientRect().top<150) cur=s.id; });
+    links.forEach(function(a){ a.classList.toggle("active",a.getAttribute("href")==="#"+cur); });
+  }
+  addEventListener("scroll",onScroll,{passive:true}); onScroll();
+  top.addEventListener("click",function(){ scrollTo({top:0,behavior:"smooth"}); });
 
-  <script src="/Onetouch.js/index.js"></script>
-</body>
-</html>
+  // Mobile menu
+  var btn=$(".menu-btn"),nav=$("#nav");
+  function setMenu(o){ nav.classList.toggle("open",o); btn.setAttribute("aria-expanded",o); btn.setAttribute("aria-label",o?"Close menu":"Open menu"); }
+  btn.addEventListener("click",function(){ setMenu(!nav.classList.contains("open")); });
+  links.forEach(function(a){ a.addEventListener("click",function(){ setMenu(false); }); });
+
+  // Scroll reveal (only below the fold; everything shows after 3s regardless)
+  function show(el){ el.classList.add("reveal-in"); el.classList.remove("reveal-pending"); if(el.classList.contains("squiggle")) el.classList.add("draw"); }
+  if("IntersectionObserver" in window && !reduce){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ var el=e.target, i=Array.prototype.indexOf.call(el.parentNode.children,el)%4; setTimeout(function(){show(el)},i*80); io.unobserve(el); } });
+    },{threshold:.12,rootMargin:"0px 0px -40px 0px"});
+    $$(".reveal").forEach(function(el){ if(el.getBoundingClientRect().top>innerHeight){ el.classList.add("reveal-pending"); io.observe(el); } else if(el.classList.contains("squiggle")) el.classList.add("draw"); });
+    setTimeout(function(){ $$(".reveal-pending").forEach(show); },3000);
+  }
+
+  // Count-up stats
+  if(!reduce) $$("[data-count]").forEach(function(el){
+    var n=+el.dataset.count,t0=null; el.textContent="0";
+    function step(t){ if(!t0)t0=t; var p=Math.min((t-t0)/1200,1); el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+(p===1&&n===5?"+":""); if(p<1) requestAnimationFrame(step); }
+    setTimeout(function(){ requestAnimationFrame(step); },900);
+  }); else { var f=$("[data-count='5']"); if(f) f.textContent="5+"; }
+
+  // Click burst: the "one touch" (desktop + touch)
+  if(!reduce) addEventListener("pointerdown",function(e){
+    if(e.target.closest(".lb")) return;
+    var b=document.createElement("span"); b.className="burst"; b.style.left=e.clientX+"px"; b.style.top=e.clientY+"px";
+    var cols=["var(--gold)","var(--lime)","var(--red)","var(--gold)","var(--lime)","var(--gold)"];
+    for(var i=0;i<6;i++){ var r=document.createElement("i"); r.style.setProperty("--r",(i*60-20)+"deg"); r.style.background=cols[i]; b.appendChild(r); }
+    document.body.appendChild(b); setTimeout(function(){ b.remove(); },600);
+  });
+
+  // Portfolio filters
+  var items=$$(".item"),fbtns=$$(".filters button");
+  fbtns.forEach(function(b){ var f=b.dataset.filter; b.querySelector(".count").textContent=f==="all"?items.length:items.filter(function(i){return i.dataset.cat===f}).length; });
+  function filter(f){ fbtns.forEach(function(b){ b.setAttribute("aria-pressed",b.dataset.filter===f); }); items.forEach(function(i){ i.classList.toggle("hide",f!=="all"&&i.dataset.cat!==f); if(!i.classList.contains("hide")) show(i); }); }
+  fbtns.forEach(function(b){ b.addEventListener("click",function(){ filter(b.dataset.filter); }); });
+  $$("[data-jump]").forEach(function(a){ a.addEventListener("click",function(){ filter(a.dataset.jump); }); });
+
+  // Lightbox: works for gallery items and case-study images
+  var lb=$(".lb"),lbImg=$(".lb img"),lbCap=$(".lb figcaption"),list=[],idx=0,last=null;
+  function caption(el){ return el.dataset.lb || (el.querySelector("figcaption b")||{}).textContent || el.querySelector("img").alt; }
+  function render(){ var el=list[idx],img=el.querySelector("img"); lbImg.src=img.currentSrc||img.src; lbImg.alt=img.alt; lbCap.innerHTML=""; lbCap.appendChild(document.createTextNode(caption(el))); var s=document.createElement("span"); s.textContent=(idx+1)+" / "+list.length; lbCap.appendChild(s); }
+  function open(el,group){ last=document.activeElement; list=group; idx=Math.max(0,group.indexOf(el)); render(); lb.classList.add("open"); document.body.style.overflow="hidden"; $(".lb .close").focus(); }
+  function close(){ lb.classList.remove("open"); document.body.style.overflow=""; if(last) last.focus(); }
+  function move(d){ idx=(idx+d+list.length)%list.length; render(); }
+  var caseEls=$$(".case-media [data-lb]");
+  function bind(el,groupFn){ el.addEventListener("click",function(){ open(el,groupFn()); }); el.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(el,groupFn()); } }); }
+  items.forEach(function(el){ bind(el,function(){ return items.filter(function(i){return !i.classList.contains("hide")}); }); });
+  caseEls.forEach(function(el){ bind(el,function(){ return caseEls; }); });
+  $$("[data-open]").forEach(function(b){ b.addEventListener("click",function(){ var t=$(b.dataset.open); if(t) open(t,caseEls); }); });
+  $(".lb .prev").addEventListener("click",function(){move(-1)});
+  $(".lb .next").addEventListener("click",function(){move(1)});
+  $(".lb .close").addEventListener("click",close);
+  lb.addEventListener("click",function(e){ if(e.target===lb) close(); });
+  addEventListener("keydown",function(e){ if(!lb.classList.contains("open")) return; if(e.key==="Escape") close(); if(e.key==="ArrowLeft") move(-1); if(e.key==="ArrowRight") move(1); });
+  var sx=0; lb.addEventListener("touchstart",function(e){ sx=e.touches[0].clientX; },{passive:true});
+  lb.addEventListener("touchend",function(e){ var dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>50) move(dx<0?1:-1); });
+
+  // Copy buttons
+  var toast=$(".toast"),tt;
+  function say(m){ toast.textContent=m; toast.classList.add("show"); clearTimeout(tt); tt=setTimeout(function(){ toast.classList.remove("show"); },2000); }
+  $$("[data-copy]").forEach(function(b){ b.addEventListener("click",function(){ var v=b.dataset.copy; if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(v).then(function(){ say("Copied "+v); },function(){ say(v); }); } else say(v); }); });
+
+  // WhatsApp tooltip greets once after a few seconds
+  setTimeout(function(){ var t=$(".wa-tip"); t.classList.add("show"); setTimeout(function(){ t.classList.remove("show"); },3500); },6000);
+})();
+</script>
+
+</body></html>
